@@ -15,9 +15,13 @@ html{
 
 /* shared styles */
 .btn-primary{
-    background-color: black;
+    background-color: rgb(17, 17, 17);
     color: white;
-    border-radius: 5px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px 40px;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 .btn-secondary{
     background-color: rgb(254, 163, 1);
@@ -75,15 +79,32 @@ nav ul li a{
     display: none;
 }
 
-
+/* banner styles */
 .banner{
-    display: none;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
+.banner h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.banner p{
+    font-size: 1.3rem;
+    max-width: 650px;
+    margin: 15px 0px;
+}
+
 
 /*! Media Query */
 @media screen and (max-width: 576px){
     *{
         margin: 0;
+    }
+    html{
+        font-size: 10px;
     }
     .nav-desktop{
         display: none;
@@ -94,5 +115,15 @@ nav ul li a{
         justify-content: space-between;
         border: 1px solid orange;
         padding: 14px 20px;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner img{
+        width: 100%;
+    }
+    .banner > div{
+        text-align: center;
     }
 }
