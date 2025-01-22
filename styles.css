@@ -13,6 +13,10 @@ html{
     margin: 0 auto;
 }
 
+*{
+    margin: 0px;
+}
+
 /* shared styles */
 .btn-primary{
     background-color: rgb(17, 17, 17);
@@ -60,7 +64,7 @@ html{
 /* nav styles */
 nav{
     justify-content: space-between;
-    padding: 0px 50px;
+    padding: 20px 140px;
     align-items: center;
 }
 .logo{
@@ -91,7 +95,7 @@ nav ul li a{
 /* banner styles */
 .banner{
     display: flex;
-    padding: 0 50px;
+    padding: 0 140px;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -111,7 +115,7 @@ nav ul li a{
     background-image: url("assets/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0px 50px;
+    padding: 0px 140px;
     padding-bottom: 20px;
 }
 .cards{
@@ -168,6 +172,58 @@ nav ul li a{
     cursor: pointer;
 }
 
+/* Our Stories section styles */
+.our-stories{
+    background: url("assets/bg.png"), linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);;
+    padding: 50px 140px;
+}
+.stories{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+.stories img{
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.story{
+    border-radius: 15px;
+    background-color: white;
+    height: 100%;
+}
+.story h4{
+    padding: 20px 30px;
+
+}
+.date-badge{
+    background: rgb(149, 178, 38);
+    width: 145px;
+    border-radius: 50px;
+    margin-left: 30px;
+    position: relative;
+    margin-top: -20px;
+    display: block;
+    padding: 5px;
+}
+.story-1{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.story-1 p{
+    padding: 15px 35px;
+}
+.story-1 h4{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.btn-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
 
 /*! Media Query */
 @media screen and (max-width: 576px){
@@ -197,7 +253,8 @@ nav ul li a{
     .banner > div{
         text-align: center;
     }
-    .curriculum, .banner{
+    /** padding fix */
+    .curriculum, .banner, .our-stories{
         padding: 4vw;
         /* rest 92% card space as requirement :p */
     }
@@ -212,6 +269,18 @@ nav ul li a{
         height: 300px;
     }
     .angle-container{
+        display: none;
+    }
+
+    .stories{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .date-badge{
+        width: 90px;
+        margin-top: -15px;
+    }
+    .story-1{
         display: none;
     }
 }
