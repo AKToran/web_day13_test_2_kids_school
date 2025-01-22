@@ -68,7 +68,7 @@ button:hover{
 /* nav styles */
 nav{
     justify-content: space-between;
-    padding: 20px 140px;
+    padding: 30px 140px;
     align-items: center;
 }
 .logo{
@@ -79,7 +79,7 @@ nav h1{
     font-weight: 700;
 }
 nav ul{
-    margin-left: -160px;
+    margin-left: -50px;
     font-size: 1.3rem;
     font-weight: 600;
 }
