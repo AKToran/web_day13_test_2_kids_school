@@ -7,12 +7,33 @@
     <title>Kids Education</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a96968d74f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="nav-desktop display-flex">
+            <div class="logo display-flex">
+                <img src="assets/logo.png" alt="logo">
+                <h1>Education</h1>
+            </div>
+            <div>
+                <ul class="display-flex">
+                    <li><a class="text-1" href="">Home</a></li>
+                    <li><a class="text-2" href="">About</a></li>
+                    <li><a class="text-3" href="">Facilities</a></li>
+                    <li><a class="text-4" href="">Admission</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn-secondary">Contact</button>
+            </div>
+        </nav>
 
+        <!--! Mobile nav -->
+        <nav class="nav-mobile">
+            <img src="assets/logo.png" alt="logo">
+            <i class="fa-solid fa-bars fa-3x"></i>
         </nav>
 
         <div class="banner">
